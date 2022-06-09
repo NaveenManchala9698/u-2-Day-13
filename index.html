@@ -19,16 +19,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
+      <div class="jumbotron mt-3">
         <h1 class="display-4">Strive Book Shop</h1>
         <p class="lead">Find your favourite books!!</p>
         <hr class="my-4" />
-        <p>
+        <!-- <p>
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
       </div>
+    </div>
+
+    <div class="container">
+      <div class="input-group mb-3 mt-5">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search books here..."
+          aria-label="Search books here..."
+          aria-describedby="button-addon2"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="row"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
