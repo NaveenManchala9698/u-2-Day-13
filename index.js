@@ -23,6 +23,7 @@ const books = async () => {
                     type="button"
                     id="cartbtn"
                     class="btn btn-sm btn-outline-secondary"
+                    onclick = "added(event)"
                 >
                     Add to Cart
                 </button>
@@ -42,15 +43,29 @@ const books = async () => {
 };
 books();
 
+let selected = 0;
+
+const addToCart = (event) => {
+  let clickedBook = event.target.closest(".card").querySelector("h5").innerHTML;
+  console.log(clickedBook);
+
+  let bookImage = event.target.closest(".card").querySelector("img");
+  console.log(bookImage);
+
+  selected += 1;
+  document.querySelector("").innerHTML = selected;
+
+  const cardOne = event.target.parentElement;
+  cardOne.classList.toggle("clicked-card");
+};
+
 //6
 const skipCard = (e) => {
   e.target.closest(".col-md-3").remove();
 };
 
 //4
-
-const cartItems = books.filter((book) =>
-  book.title.toLowerCase().includes(query.toLowerCase())
-);
-
-console.log(cartItems.length);
+const added = (e) => {
+  let eachCard = e.target.closest(".card");
+  eachCard.classList.add("addBg");
+};
